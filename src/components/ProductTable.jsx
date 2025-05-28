@@ -1,5 +1,5 @@
 import React from 'react';
-function ProductTable({ products }) {
+function ProductTable({ products, onEdit, onDelete }) {
   return (
     <table>
       <thead>
@@ -13,12 +13,15 @@ function ProductTable({ products }) {
       </thead>
       <tbody>
         {products.map((product) => (
-          <tr>
-            <td>{product.title}</td>
+          <tr key={product.id}>
+            <td>
+                <input value={product.title} onChange={(e)=>onEdit(product.id, e.target.value)}/>
+            </td>
             <td>{product.brand}</td>
             <td>{product.category}</td>
-            <td>{product.price}</td>
+            <td>${product.price}</td>
             <td>{product.rating}</td>
+            <td><button onClick={()=>onDelete(product.id)}>Delete</button></td>
           </tr>
         ))}
       </tbody>
