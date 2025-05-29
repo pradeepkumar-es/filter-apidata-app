@@ -79,6 +79,13 @@ return (
                     rating && <option key={rating} value={rating}>{rating}⭐</option>
                 ))}
             </select>
+            <button className='resetButton' onClick={()=>setFilters({ 
+            title:'',
+            brand:'',
+            category:'',
+            price:'',
+            rating:''})}
+            >Reset Filters</button>
     </div>
 )
 }

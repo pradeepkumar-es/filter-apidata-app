@@ -68,7 +68,7 @@ function App(){
       {/* <p>{products[0]}</p> */}
       {loading?<p>Loading....</p>:error?<p>{error}</p>:(
         <>
-        <DropDownFilters products={filteredProducts} filters={filters} setFilters={setFilters}/>
+        <DropDownFilters products={products} filters={filters} setFilters={setFilters}/>
         <ProductTable products={filteredProducts} onEdit={editTitle} onDelete={deleteRow} />
         {filteredProducts.length===0 && <p>No results found</p>}
         </>
