@@ -1,14 +1,15 @@
 import React from "react";
 import { useState } from "react";
 import { BsPencilSquare } from "react-icons/bs";
-import { MdSave } from "react-icons/md";
+import { MdSave, MdDelete } from "react-icons/md";
 function ProductTable({ products, onEdit, onDelete }) {
   const [editID, setEditID] = useState(null);
   function handleEditMode(id) {
     setEditID(id);
   }
   return (
-    <table>
+    <div className="tableContainer">
+       <table>
       <thead>
         <tr>
           <th>Title(Editable)</th>
@@ -34,11 +35,11 @@ function ProductTable({ products, onEdit, onDelete }) {
               )}
               <span className="edit">
                 {editID === product.id ? (
-                  <i onClick={() => setEditID(null)}>
+                  <i style={{color:"green"}} onClick={() => setEditID(null)}>
                     <MdSave />
                   </i>
                 ) : (
-                  <i onClick={() => handleEditMode(product.id)}>
+                  <i style={{color:"#6b7280"}} onClick={() => handleEditMode(product.id)}>
                     <BsPencilSquare />
                   </i>
                 )}
@@ -53,13 +54,14 @@ function ProductTable({ products, onEdit, onDelete }) {
                 className="deleteButton"
                 onClick={() => onDelete(product.id)}
               >
-                Delete
+                <i><MdDelete/></i>
               </button>
             </td>
           </tr>
         ))}
       </tbody>
     </table>
+    </div>
   );
 }
 export default ProductTable;

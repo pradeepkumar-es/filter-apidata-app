@@ -6,11 +6,6 @@
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 a {
@@ -26,8 +21,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  place-items: center;
-  min-width: 320px;
+  /* min-width: 320px; */
   min-height: 100vh;
 
 }
@@ -43,20 +37,58 @@ button, select {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  /* background-color: #1a1a1a; */
   cursor: pointer;
   transition: border-color 0.25s;
   border: 1px solid grey;
   margin-right:3px;
 }
+select{
+  max-width: 165px;
+}
 button:hover {
   border-color: #646cff;
 }
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+.app{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 7px;
 }
 
+.deleteButton i{
+  color: rgba(255, 4, 4, 0.781);
+}
+.deleteButton i:hover{
+  color: rgb(255, 6, 6);
+}
+.dropDowns{
+  margin: 5px;
+}
+table {
+  border-collapse:collapse ;
+  display: block;
+  overflow-x: auto;
+  width: 100%;
+  margin: 0px 10px;
+}
+th, td{
+  border: 1px solid #ddd;
+  max-width: 100%;
+  padding: 8px;
+  text-align: left;
+}
+.edit{
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  flex-direction:row ;
+  gap: 10px;
+}
+.edit i, .deleteButton i{
+  font-size: larger;
+  cursor: pointer;
+}
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
@@ -69,45 +101,19 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
-.app{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  gap: 7px;
+@media screen and (max-width:1279px) and (min-width:769px){
+  table{
+    width: 752px;
+  }
 }
-/* .productTitle{
-    width: 279px;
-} */
-.deleteButton{
-  background-color: rgba(255, 0, 0, 0.726);
+@media screen and (max-width:768px) and (min-width:565px) {
+  table{
+    width: 560px;
+  }
 }
-.deleteButton:hover{
-  background-color: rgb(238, 11, 11);
-}
-/* .resetButton{
-  border: 1px solid grey;
-} */
-table {
-  border-collapse:collapse ;
-  display: block;
-  overflow-x: auto;
-  white-space: nowrap;
-}
-th, td{
-  border: 1px solid #ddd;
-  width: 100%;
-  padding: 8px;
-  text-align: left;
-}
-.edit{
-  display: flex;
-  justify-content: end;
-  align-items: center;
-  flex-direction:row ;
-  gap: 10px;
-}
-.edit i{
-  font-size: larger;
-  cursor: pointer;
+@media screen and (max-width:565px){
+  table{
+    width: 400px;
+    margin: 0px;
+  }
 }
