@@ -1,18 +1,18 @@
 ## Setup Instructions
 1. clone the repository
-   git clone https://github.com/pradeepkumar-es/filter-apidata-app.git
+  - git clone https://github.com/pradeepkumar-es/filter-apidata-app.git
 
 2. Install NPM Packages
-   npm install
+  - npm install
 
 3. Run the App locally
-   npm run dev
+  - npm run dev
 
 4. Visit the link to see the website locally on browser 
-   http://localhost:5173/
+  - http://localhost:5173/
 
 ## Deployed URL
-   https://apidatafilter.netlify.app/
+  - https://apidatafilter.netlify.app/
 
 ## Technologies Used
 - **Build Tool**: Vite  
