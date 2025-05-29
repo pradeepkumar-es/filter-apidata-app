@@ -15,13 +15,14 @@
    https://apidatafilter.netlify.app/
 
 ## Technologies Used
-   Build Tool : Vite
-   Frontend Library : React
-   Structure & Styling : HTML, CSS
-   Core language: JavaScript (ES6+)
-   JSX: Syntax extension for JavaScript
-   Version Control : Git
-   Source Hosting : Github
-   Hosting Platform : Netlify
-   Library: react-icons (for icons)
+- **Build Tool**: Vite  
+- **Frontend Library**: React  
+- **Structure & Styling**: HTML, CSS  
+- **Core Language**: JavaScript (ES6+)  
+- **JSX**: Syntax extension for JavaScript  
+- **Version Control**: Git  
+- **Source Hosting**: GitHub  
+- **Hosting Platform**: Netlify  
+- **Library**: react-icons (for icons)
+
   
