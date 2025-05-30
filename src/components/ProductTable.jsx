@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { BsPencilSquare } from "react-icons/bs";
 import { MdSave, MdDelete } from "react-icons/md";
+import { FaStar } from "react-icons/fa";
 function ProductTable({ products, onEdit, onDelete }) {
   const [editID, setEditID] = useState(null);
   function handleEditMode(id) {
@@ -48,7 +49,9 @@ function ProductTable({ products, onEdit, onDelete }) {
             <td>{product.brand ? product.brand : "No Data Found"}</td>
             <td>{product.category ? product.category : "No Data Found"}</td>
             <td>${product.price}</td>
-            <td>{product.rating ? product.rating : "No Data Found"}⭐</td>
+            <td style={{verticalAlign:"middle"}}>{product.rating ? product.rating : "No Data Found"}
+              <i style={{color:"#FFD700", fontSize:"medium"}}><FaStar/></i>
+            </td>
             <td>
               <button
                 className="deleteButton"
